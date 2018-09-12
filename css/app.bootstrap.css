@@ -1,0 +1,15 @@
+a {
+	color: #337ab7;
+}
+.page-item.active .page-link {
+	background-color: #4a81b9;
+	border-color: #4a81b9;
+}
+
+.table-hover tbody tr:hover {
+	background-color: inherit;
+}
+
+.table {
+	margin-bottom: 0px;
+}

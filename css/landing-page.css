@@ -1,0 +1,47 @@
+.main-body-content {
+	padding: 75px;
+}
+
+.col {
+	padding: 60px;
+}
+
+.lp-box {
+	background: #f7f7f7;
+	padding: 20px;
+	font-size: 23px;
+}
+
+.box-container a:hover {
+ 	text-decoration: none;
+}
+
+.box-container:hover {
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.43);
+	-moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.43);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.43);
+	outline: none !important;
+	transition: all .3s ease-in-out;
+	transform: scale(1.1);
+	background: inherit;
+	cursor: pointer;
+}
+
+.box1 { border: 1px solid #91a9bb; }
+.box2 { border: 1px solid #f4beb7; }
+.box3 { border: 1px solid #fcdec5; }
+
+.title1 { font-size: 23px; font-weight: 500; padding: 10px; color: #ffffff; background: #446d8c; }
+.title2 { font-size: 23px; font-weight: 500; padding: 10px; color: #ffffff; background: #e77869; }
+.title3 { font-size: 23px; font-weight: 500; padding: 10px; color: #ffffff; background: #f69a50; }
+
+.icon1 { font-size: 100px; padding: 20px; color: #446d8c;  }
+.icon2 { font-size: 100px; padding: 20px; color: #f69a50; }
+
+.input-group {
+	padding: 41px 10px 41px 10px;
+}
+.input-group-addon {
+    font-size: 18px;
+}
+

@@ -1,0 +1,146 @@
+/**** Profile Content ****/
+.card.table-style {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0;
+}
+
+.card.table-style .card-header {
+    background-color: #4995cf;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.card-header button.dropdownMenuButton {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+.card-header button.dropdownMenuButton:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.card-header .dropdown-menu {
+    min-width: 0;
+}
+
+.card.table-style .card-body {
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ededed;
+    border-top: 0;
+}
+
+.card.table-style .card-body form > .row {
+    margin-bottom: 25px;
+}
+
+.card.table-style .card-body > textarea {
+    width: 100%;
+}
+
+.custom-hover-select option:hover {
+    background-color: #000;
+}
+
+.card.table-style-full-width-body .card-body {
+    padding: 0;
+}
+
+.card.table-style-full-width-body .table th, .card.table-style-full-width-body .table td {
+    border: 0;
+}
+
+.tooltip .tooltip-inner {
+    width: 800px;
+    max-width: 100%;
+}
+
+.lead-status-toggle {
+    display: none;
+}
+
+.lead-status-toggle.active {
+    display: block;
+}
+
+.top-stats {
+    font-size: 25px;
+    margin-top: 3px;
+}
+
+.box-text-style1 {
+    line-height: 22px;
+}
+
+.img-vertical-baseline {
+    vertical-align: baseline;
+}
+
+.call-back-box .call-back-box-txt {
+    line-height: 18px;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.call-back-box > a {
+    float: right;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.custom-dropdown-icon .dropdownMenuButton {
+    background: none !important;
+    border: 0;
+    padding: 0;
+}
+
+.custom-dropdown-icon .dropdownMenuButton:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.custom-dropdown-icon .dropdown-toggle::after {
+    display: none;
+}
+
+table.custom-table-striped {
+    margin-bottom: 0;
+}
+
+tr.th-has-bottom-border th {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+div#stats-site {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+#stats-site .col-3 .form-inline {
+    position: relative;
+    max-width: 90%;
+}
+
+#stats-site .col-3:not(:last-child) .form-inline:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    right: 0;
+    height: 100%;
+    background-color: #e1e1e1;
+}
+
+.chart-padding {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.btn-save.btn-primary {
+    background-color: #337ab7;
+    padding: 5px 20px
+}
