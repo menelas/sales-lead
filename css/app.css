@@ -33,9 +33,18 @@ label {
 }
 
 #footer {
-    color: #7d7d7d;
-    text-align: center;
-    padding: 15px 0;
+   color: #7d7d7d;
+   font-size: 14px;
+   margin: 0;
+   position: fixed;
+   bottom: 0;
+   z-index: 9999;
+   background: #f5f7f8;
+   min-height: 25px;
+   width: 100%;
+   text-align: center;
+   border-top: 1px solid #ccc;
+   padding-top: 5px;
 }
 
 /****Global Phone Status ****/
@@ -355,7 +364,7 @@ span.time-clock {
 #main-content .container-fluid-has-sidebar {
     background-color: #fff;
     padding: 25px 20px 25px 100px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #e5e5e5;
     border-top: none;
 }
 
@@ -438,7 +447,6 @@ span.time-clock {
 }
 
 /**** Site Table *************************************/
-
 table {
    width: 100%;
 }
@@ -569,7 +577,6 @@ table {
 
 
 /***** Media queries for th and td ***********************************/
-
 @media only screen and (max-width: 767px) and (min-width: 480px), only screen and (max-width: 479px) {
    th {
       font-size: 12px;

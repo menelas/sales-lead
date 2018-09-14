@@ -1,4 +1,42 @@
 (function($) {
+	$('#datetimepicker1').datetimepicker();	
+	function datePickShow(){
+		if($(".lead-status-toggle").hasClass('active')){
+			if($("#reachDecisionMaker").prop('checked')){
+			   $('#datetimepickerContainer').addClass('active');
+			}else{
+			   $('#datetimepickerContainer').removeClass('active');
+			}				
+		}else{
+			$('#datetimepickerContainer').removeClass('active');
+			
+		}
+	
+	}
+	function cancelReasonToggle(){
+		if($("#lead-status").val() == 'Decline'){
+			$('#cancelReasonToggle').addClass('active');				
+		}else{
+			$('#cancelReasonToggle').removeClass('active');
+		}
+	}	
+	function showPolicyNumber(){
+		if($("#lead-status").val() == 'Sold'){
+			$('#policyNumberToggle').addClass('active');				
+		}else{
+			$('#policyNumberToggle').removeClass('active');
+		}
+	}	
+   $("#reachDecisionMaker").on("click", function(){
+	   datePickShow();
+    });	
+    var count = 30;
+    var t, flagDown = true, flagUp = false;
+    var mins = 0;
+    var elem = $("#realtime");
+    var elem2 = $("#realtime2");
+    counting();
+
     $('[data-toggle="tooltip"]').tooltip({placement:"top"});
     $("#status-select").on("change", function(){
        var curVal = $(this).val();
@@ -7,15 +45,25 @@
        }else{
            $(this).removeClass("offline");
        }
+	   
     });
-    leaderStatus();
+	
+	function StatusChangeUpdates(){
+		leaderStatus();
+		datePickShow();
+		showPolicyNumber();
+		cancelReasonToggle();		
+	}
+	StatusChangeUpdates();
     $("#lead-status").on("change", function(){
-        leaderStatus();
+        StatusChangeUpdates();
     });
     function leaderStatus(){
         var curVal = $("#lead-status").val();
+
         if(curVal=="Open"){
             $(".lead-status-toggle").addClass("active");
+			
             $(".status-sold-toggle").removeClass("active");
             $(".decline-status-toggle").removeClass("active");
             $(".call-back-toggle").hide();
@@ -26,16 +74,19 @@
             $(".status-sold-toggle").addClass("active");
             $(".lead-status-toggle").removeClass("active");
             $(".call-back-toggle").hide();
-        }else if(curVal=="Decline"){
+        }else if(curVal=="decline"){
             $(".decline-status-toggle").addClass("active");
             $(".status-sold-toggle").removeClass("active");
             $(".lead-status-toggle").removeClass("active");
             $(".call-back-toggle").hide();
-        }else{
+        }else if(curVal=="Quote"){
+			$(".lead-status-toggle").addClass("active");
+		}else{
             $(".lead-status-toggle").removeClass("active");
             $(".status-sold-toggle").removeClass("active");
             $(".call-back-toggle").hide();
         }
+		
     }
     $("#btn-phone").on("click", function(e){
         e.preventDefault();
@@ -44,66 +95,29 @@
             $(".box-phone").removeClass("running");
             $("#realtime").text(":30");
             $(".box-phone").addClass("next-call");
-            clearInterval(timer);
             $(".num-txt").text("Next Call");
+            flagUp = false;
+            flagDown = false;
         } else if($(".box-phone").hasClass("next-call")){
+            $(".box-phone").addClass("ran");
             $(".box-phone").removeClass("next-call");
             $(".num-txt").text("613-654-5321");
-            clearInterval(timer);
-            countdown30s();
-        }else{
-            countdown30s();
+            $("#realtime").text(":30").show();
+            $("#realtime2").hide().text("00:00");
+            flagUp = false;
+            flagDown = true;
+            count = 30;
+            counting();
+        }else if($(".box-phone").hasClass("ran")){
+            $("#realtime2").show();
+            $("#realtime").hide().text(":30");
+            $(".box-phone").removeClass("ran");
+            $(".box-phone").addClass("running");
+            cdpSwitchUp();
+            counting();
         }
     });
-    function startCount()
-    {
-        timer = setInterval(count,1000);
-    }
-    function count()
-    {
-        var time_shown = $("#realtime").text();
-        var time_chunks = time_shown.split(":");
-        var hour, mins, secs;
 
-        mins=Number(time_chunks[0]);
-        secs=Number(time_chunks[1]);
-        secs++;
-        if (secs==60){
-            secs = 0;
-            mins=mins + 1;
-        }
-        $("#realtime").text(plz(mins) + ":" + plz(secs));
-    }
-
-    function plz(digit){
-
-        var zpad = digit + '';
-        if (digit < 10) {
-            zpad = "0" + zpad;
-        }
-        return zpad;
-    }
-    function countdown30s(){
-
-        var timeLeft = 29;
-        var elem = $("#realtime");
-        var timerId = setInterval(countdown, 1000);
-
-        function countdown() {
-            if (timeLeft == -1) {
-                clearTimeout(timerId);
-                countdownEnd();
-            } else {
-                elem.text(":"+timeLeft);
-                timeLeft--;
-            }
-        }
-    }
-    function countdownEnd() {
-        $("#realtime").text("00:00");
-        $(".box-phone").addClass("running");
-        startCount();
-    }
     $("#maker-checkbox").on("change", function(){
         if($(this).is(":checked")){
             $(".call-back-toggle").show();
@@ -128,4 +142,52 @@
             $("."+colClass).hide();
         });
     });
+    function cddisplay() {
+        elem.text(":"+count);
+    }
+
+    function counting() {
+        // starts countdown
+        if (count == -1) {
+            $(".box-phone").removeClass("ran");
+            $(".box-phone").addClass("running");
+            flagUp = true;
+            flagDown = false;
+            count++;
+            t = setTimeout(counting, 1000);
+            elem.hide();
+            elem2.show();
+            elem2.text("00:"+plz(count));
+        } else if (flagUp == true) {
+            count++;
+            if (count==60){
+                count = 0;
+                mins = mins + 1;
+            }
+            elem2.text(plz(mins) + ":" + plz(count));
+            clearTimeout(t);
+            t = setTimeout(counting, 1000);
+        }else if(flagDown==true) {
+            flagUp = false;
+            clearTimeout(t);
+            t = setTimeout(counting, 1000);
+            elem.text(":"+plz(count));
+            count--;
+        }
+    }
+
+    function plz(digit){
+
+        var zpad = digit + '';
+        if (digit < 10) {
+            zpad = "0" + zpad;
+        }
+        return zpad;
+    }
+
+    function cdpSwitchUp() {
+        count = -1;
+        flagUp = true;
+        flagDown = false;
+    }
 })(jQuery);

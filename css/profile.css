@@ -29,7 +29,7 @@
 .card.table-style .card-body {
     background-color: #fafafa;
     padding: 15px;
-    border: 1px solid #ededed;
+    border: 1px solid #d0d0d0;
     border-top: 0;
 }
 
@@ -58,12 +58,8 @@
     max-width: 100%;
 }
 
-.lead-status-toggle {
-    display: none;
-}
-
-.lead-status-toggle.active {
-    display: block;
+a:hover {
+    text-decoration: none;
 }
 
 .top-stats {
@@ -143,4 +139,22 @@ div#stats-site {
 .btn-save.btn-primary {
     background-color: #337ab7;
     padding: 5px 20px
+}
+
+.lead-status-toggle { display: none; }
+.lead-status-toggle.active { display: block; }
+
+.callback-toggle { display: none; }
+.callback-toggle.active { display: block; }
+.callback-toggle .input-group-addon{ padding: 7px; }
+
+.cancelReasonToggle { display: none; }
+.cancelReasonToggle.active { display: flex; }
+
+.policyNumberToggle { display: none; }
+.policyNumberToggle.active { display: block; }
+
+#datetimepicker1 input {
+    border-radius: 5px 0px 0px 5px !important;
+    margin-left: 10px;
 }

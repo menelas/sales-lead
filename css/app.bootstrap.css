@@ -1,6 +1,10 @@
 a {
 	color: #337ab7;
 }
+.form-control, .dropdown-menu  {
+	font-size: inherit;
+}
+
 .page-item.active .page-link {
 	background-color: #4a81b9;
 	border-color: #4a81b9;

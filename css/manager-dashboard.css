@@ -27,6 +27,11 @@ div#stats-site {
     border-radius: 3px;
 }
 
+a#dropdownMenuLink, a#dropdownMenuLink:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 #stats-site .col-3 .form-inline {
     position: relative;
     max-width: 80%;
