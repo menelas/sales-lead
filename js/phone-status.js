@@ -38,15 +38,6 @@
     counting();
 
     $('[data-toggle="tooltip"]').tooltip({placement:"top"});
-    $("#status-select").on("change", function(){
-       var curVal = $(this).val();
-       if(curVal==2){
-           $(this).addClass("offline");
-       }else{
-           $(this).removeClass("offline");
-       }
-	   
-    });
 	
 	function StatusChangeUpdates(){
 		leaderStatus();

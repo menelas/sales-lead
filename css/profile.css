@@ -42,7 +42,8 @@
 }
 
 .custom-hover-select option:hover {
-    background-color: #000;
+    background-color: blue;
+    color: #fff;
 }
 
 .card.table-style-full-width-body .card-body {

@@ -1,3 +1,6 @@
+## 2018-9-17
+• Updated html pages for responsive changes and working on header
+
 ## 2018-9-13
 • Created agent-dashboard and profile-page.html updated css
 

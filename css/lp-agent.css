@@ -1,9 +1,9 @@
-.main-body-content {
+.main-content {
 	padding: 75px;
 }
 
 .col {
-	padding: 60px;
+	padding: 5%;
 }
 
 .lp-box {
@@ -38,10 +38,12 @@
 .icon1 { font-size: 100px; padding: 20px; color: #446d8c;  }
 .icon2 { font-size: 100px; padding: 20px; color: #f69a50; }
 
-.input-group {
+.lp-box .input-group {
 	padding: 41px 10px 41px 10px;
 }
+
 .input-group-addon {
     font-size: 18px;
 }
+
 
