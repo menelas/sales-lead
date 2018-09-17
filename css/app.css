@@ -83,38 +83,32 @@ span#realtime {
     background: #b4423f url("../images/icon-phone-disconnect.png") no-repeat center;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1360px){
     .box-phone {
         width: auto;
     }
 }
 
 @media (max-width: 992px) {
-    .box-phone-status-style2.box-phone-status {
+    .box-phone-status-style.box-phone-status {
         padding: 5px;
         float: none !important;
         width: 100%;
         max-width: 100%;
     }
-    .box-phone-status-style2 .box-phone > a {
+    .box-phone-status-style .box-phone > a {
         padding: 4px 5px 4px 50px;
     }
-    .box-phone-status-style2 select.form-control:not([size]):not([multiple]) {
+    .box-phone-status-style select.form-control:not([size]):not([multiple]) {
         height: auto;
     }
-    .box-phone-status-style2 select {
+    .box-phone-status-style select {
         padding-top: 4px;
         padding-bottom: 4px;
     }
     .col-logo {
         width: 100%;
         max-width: 100%;
-        flex: 100%;
-    }
-    .col-phone {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 5px;
         flex: 100%;
     }
 }
@@ -140,6 +134,9 @@ span.time-clock {
     padding: 10px;
     border-radius: 5px;
     max-width: 400px;
+    margin-top: -8px;
+    float: right;
+    width: 100%;
 }
 
 .box-phone-status select {
@@ -151,6 +148,8 @@ span.time-clock {
     padding-left: 6px;
 }
 
+
+
 .box-phone-status select.offline {
     background: transparent url("../images/offline-status.png") no-repeat left center;
 }
@@ -161,6 +160,8 @@ span.time-clock {
     box-shadow: none;
     background-color: transparent;
 }
+
+.form-control:focus
 
 .box-phone-status select:hover {
     cursor: pointer;
@@ -194,6 +195,22 @@ span.time-clock {
 
 .box-phone.next-call span.icon-phone {
     background: #386f9b url(../images/next-call-icon.png) no-repeat center;
+}
+
+
+.call-search-box{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .call-search-box {
+        top: 80px;
+    }
+    header {
+        height: 200px;
+    }
 }
 
 .image-icon-box {
@@ -253,7 +270,7 @@ span.time-clock {
      height: auto;
 }
 
-@media (max-width: 1200px) and (min-width: 992px) {
+@media (max-width: 1200px) and (min-width: 768px) {
     .navbar-brand img {
         max-width: 100px;
     }
@@ -514,7 +531,6 @@ button.navbar-toggler {
     text-decoration: none;
     padding: 10px 10px 10px 6px;
 } 
-
 
 /**** Misc ****/
 .input-group-addon {
@@ -813,11 +829,4 @@ td a {
 
 .numeric {
     text-align: right;
-}
-
-
-.call-search-box{
-    position: absolute;
-    right: 0;
-    top: 10px;
 }

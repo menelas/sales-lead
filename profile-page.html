@@ -19,41 +19,45 @@
     <header>
         <nav class="container-fluid topNavBar">
             <div class="row">
-                <div class="col-7 col-md-8 col-lg-5 col-xl-5 col-logo">
+                <div class="col-12 col-md-12 col-lg-5 col-xl-5 col-logo">
                     <div class="form-inline">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                        </button>
                         <div class="alogo">
                             <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Insurance Office of America"></a>
                         </div>
-
                         <div class="taglines">
                             <h4>Insurance Office of America</h4>
                             <h5>Carrier Sales Lead</h5>
                         </div>
-
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-
+    
     <div class="container-fluid main-content">
-        <div class="col-7 call-search-box">
-            <div class="col-phone">
-                <div class="box-phone-status box-phone-status-style2 float-right">
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="box-phone ran">
-                                <a href="tel:#" id="btn-phone">
-                                    <span class="icon-phone"></span> <span class="num-txt">613-654-5321</span>
-                                    <span class="time-clock"><img alt="Clock" src="images/icon-clock.png"><img class="phone-running" alt="Clock" src="images/icon-phone-running.png"> <span id="realtime">0:30</span><span id="realtime2" style="display: none">00:00</span></span>
-                                </a>
+        <div class="col-12 col-md-12 col-lg-7 col-xl-7 call-search-box">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-2"></div>
+                <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-2">
+                    <div class="box-phone-status box-phone-status-style float-right">
+                        <div class="row">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                <div class="box-phone ran">
+                                    <a href="tel:#" id="btn-phone">
+                                        <span class="icon-phone"></span> <span class="num-txt">613-654-5321</span>
+                                        <span class="time-clock"><img alt="Clock" src="images/icon-clock.png"><img class="phone-running" alt="Clock" src="images/icon-phone-running.png"> <span id="realtime">0:30</span><span id="realtime2" style="display: none">00:00</span></span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <select class="form-control" id="status-select">
-                                <option value="Online">Online</option>
-                                <option value="Offline">Offline</option>
-                            </select>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <select class="form-control" id="status-select">
+                                    <option value="Online">Online</option>
+                                    <option value="Offline">Offline</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>

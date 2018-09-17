@@ -56,3 +56,12 @@ body {
 	left: auto;
 	right: 0;
 }
+
+@media only screen and (max-width: 992px) {
+    .call-search-box {
+        top: 0px;
+    }
+    header {
+        height: auto;
+    }
+}

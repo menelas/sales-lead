@@ -33,14 +33,13 @@ div#stats-site {
 
 #stats-site .col-6 .form-inline {
     position: relative;
-    max-width: 80%;
 }
 
 #stats-site .col-6:not(:last-child) .form-inline:after {
     position: absolute;
     content: "";
     width: 1px;
-    right: 0;
+    right: 30px;
     height: 100%;
     background-color: #e1e1e1;
 }
@@ -100,7 +99,11 @@ td:nth-child(1){
     margin: 0px 7px 0px -2px;
     display: inline;
 }
-
+@media (max-width: 1200px){
+    #stats-site .col-6:not(:last-child) .form-inline:after {
+        right: 0;
+    }
+}
 @media (max-width: 767px){
     #stats-site .col-6 {
         margin-bottom: 15px;
