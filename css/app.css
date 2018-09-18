@@ -154,6 +154,10 @@ span.time-clock {
     background: transparent url("../images/offline-status.png") no-repeat left center;
 }
 
+.box-phone-status select.logout {
+    background: transparent url("../images/logout-status.png") no-repeat left center;
+}
+
 .box-phone-status select:focus {
     border: 0;
     outline: 0;

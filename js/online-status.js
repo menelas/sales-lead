@@ -6,6 +6,11 @@
         }else{
             $(this).removeClass("offline");
         }
+        if(curVal=="Logout"){
+            $(this).addClass("logout");
+        }else{
+            $(this).removeClass("logout");
+        }
 
     });
 })(jQuery);

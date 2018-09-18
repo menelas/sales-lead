@@ -167,8 +167,9 @@ div#stats-site {
 
 @media only screen and (max-width: 992px) {
     .call-search-box {
-        top: 60px;
+        top: 25px;
     }
+
     header {
         height: 120px;
     }
