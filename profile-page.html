@@ -36,12 +36,11 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="container-fluid main-content">
         <div class="col-12 col-md-12 col-lg-7 col-xl-7 call-search-box">
             <div class="row">
-                <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-2"></div>
-                <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-2">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 mt-2">
                     <div class="box-phone-status box-phone-status-style float-right">
                         <div class="row">
                             <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
@@ -64,119 +63,133 @@
                 </div>
             </div>
         </div>
-        <div class="card bg-primary mb-3 table-style">
-            <div class="card-header">
-                <span>Chris Robertson</span>
+        <div class="container-fluid-has-sidebar">
+            <div id="sidebar" class="fixed-sidebar sidebar1 sidebar navbar-collapse" aria-expanded="false">
+                <ul class="">
+                    <li>
+                        <a href="lp-agent.html"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="agent-dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i><span>Dashboard</span></a>
+                    </li>
+                </ul>
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Email:</label> chris.robertson@gmail.com </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Telephone:</label> 613-654-5321 </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Date of Birth:</label> 5/12/1972 </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>State:</label> Florida </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Type:</label> Home </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    <label>Lead Status:</label>
-                                </div>
-                                <div class="form-group mx-sm-2">
-                                    <select class="form-control custom-hover-select" id="lead-status">
+
+            <div class="card bg-primary mb-3 table-style">
+                <div class="card-header">
+                    <span>Chris Robertson</span>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Email:</label> chris.robertson@gmail.com </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Telephone:</label> 613-654-5321 </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Date of Birth:</label> 5/12/1972 </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>State:</label> Florida </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> <label>Type:</label> Home </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>Lead Status:</label>
+                                    </div>
+                                    <div class="form-group mx-sm-2">
+                                        <select class="form-control custom-hover-select" id="lead-status">
                                         <option>-- Please Select --</option>
                                         <option selected value="Open">Open</option>
                                         <option value="Quote">Quote</option>
                                         <option value="Sold">Sold</option>
                                         <option value="Decline">Decline</option>
                                     </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-3 lead-status-toggle mt-1">
-                            <label>Reached Decision Maker Contact:</label> <input type="checkbox" aria-label="Checkbox" id="reachDecisionMaker">
-                        </div>
+                            <div class="col-3 lead-status-toggle mt-1">
+                                <label>Reached Decision Maker Contact:</label> <input type="checkbox" aria-label="Checkbox" id="reachDecisionMaker">
+                            </div>
 
-                        <div class="col-3">
-                            <div class="callback-toggle" id='datetimepickerContainer'>
-                                <div class="input-group date form-group" id="datetimepicker1">
-                                    <label>Callback:</label>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
+                            <div class="col-3">
+                                <div class="callback-toggle" id='datetimepickerContainer'>
+                                    <div class="input-group date form-group" id="datetimepicker1">
+                                        <label>Callback:</label>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar fa fa-calendar"></span>
-                                    </span>
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-inline policyNumberToggle" id="policyNumberToggle">
-                                <div class="form-group">
-                                    <label>Policy Number:</label>
-                                    <input type="text" name="policy_number" class="form-control mx-sm-2">
+                                <div class="form-inline policyNumberToggle" id="policyNumberToggle">
+                                    <div class="form-group">
+                                        <label>Policy Number:</label>
+                                        <input type="text" name="policy_number" class="form-control mx-sm-2">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-inline cancelReasonToggle" id="cancelReasonToggle">
-                                <div class="form-group">
-                                    <label>Reason:</label>
-                                    <select class="form-control custom-hover-select mx-sm-3 " id="reasonForClosed" name="reason_for_closed">
+                                <div class="form-inline cancelReasonToggle" id="cancelReasonToggle">
+                                    <div class="form-group">
+                                        <label>Reason:</label>
+                                        <select class="form-control custom-hover-select mx-sm-3 " id="reasonForClosed" name="reason_for_closed">
                                         <option>-- Please Select --</option>
                                         <option value="Do not call">Do not call</option>
                                         <option value="Decline Quote">Decline quote</option>
                                         <option value="Invalid lead">Invalid lead</option>
                                     </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                    <div class="row">
-                        <div class="col-1"> <label>Notes: </label> </div>
-                        <div class="col-7"> <textarea class="form-control" rows="3"></textarea> </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-save float-right">Save</button>
-                </form>
-            </div>
-        </div>
-        <div class="card bg-primary mb-3 table-style table-style-full-width-body">
-            <div class="card-header">
-                <i class="fa fa-history"></i> Call History
-            </div>
-            <div class="card-body">
-                <div class="site-table">
-                    <table class="table table-striped table-hover custom-table-striped">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Duration</th>
-                                <th>Note</th>
-                                <th>Agent</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-title="Date">8/24/2018 7:03 PM</td>
-                                <td data-title="Duration">00:02:14</td>
-                                <td data-title="Note">Lead called in and decline quote.</td>
-                                <td data-title="Agent">Carter Hahn</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Date" scope="row">8/23/2018 5:33 PM</td>
-                                <td data-title="Duration">00:04:14</td>
-                                <td data-title="Note">Quoted on 8/23, asked to be called on 8/24 for decision.</td>
-                                <td data-title="Agent">Lutca Atkins</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Date" scope="row">8/22/2018 2:45 PM</td>
-                                <td data-title="Duration">00:05:09</td>
-                                <td data-title="Note" data-toggle="tooltip" data-placement="top" title="Made first contact, asked to be called back on 8/21. Lead was at work during the call. Seemed eager to sign up for policy. Asked to be called again"><a href="#">Made first contact, asked to be called back on 8/21. Lead was at work during the call. Seemed eager to sign up for policy. Asked...</a></td>
-                                <td data-title="Agent">Eliza Collins</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"> <label>Notes: </label> </div>
+                            <div class="col-7"> <textarea class="form-control" rows="3"></textarea> </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save float-right">Save</button>
+                    </form>
                 </div>
             </div>
+            <div class="card bg-primary mb-3 table-style table-style-full-width-body">
+                <div class="card-header">
+                    <i class="fa fa-history"></i> Call History
+                </div>
+                <div class="card-body">
+                    <div class="site-table">
+                        <table class="table table-striped table-hover custom-table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Duration</th>
+                                    <th>Note</th>
+                                    <th>Agent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Date">8/24/2018 7:03 PM</td>
+                                    <td data-title="Duration">00:02:14</td>
+                                    <td data-title="Note">Lead called in and decline quote.</td>
+                                    <td data-title="Agent">Carter Hahn</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Date" scope="row">8/23/2018 5:33 PM</td>
+                                    <td data-title="Duration">00:04:14</td>
+                                    <td data-title="Note">Quoted on 8/23, asked to be called on 8/24 for decision.</td>
+                                    <td data-title="Agent">Lutca Atkins</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Date" scope="row">8/22/2018 2:45 PM</td>
+                                    <td data-title="Duration">00:05:09</td>
+                                    <td data-title="Note" data-toggle="tooltip" data-placement="top" title="Made first contact, asked to be called back on 8/21. Lead was at work during the call. Seemed eager to sign up for policy. Asked to be called again"><a href="#">Made first contact, asked to be called back on 8/21. Lead was at work during the call. Seemed eager to sign up for policy. Asked...</a></td>
+                                    <td data-title="Agent">Eliza Collins</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -190,6 +203,7 @@
     <script src="js/bootstrap-datetimepicker.js"></script>
     <script src="js/phone-status.js"></script>
     <script src="js/online-status.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

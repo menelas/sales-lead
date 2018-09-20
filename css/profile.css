@@ -1,4 +1,9 @@
 /**** Profile Content ****/
+
+.main-content {
+    padding: 0px;
+}
+
 .card.table-style {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -167,7 +172,7 @@ div#stats-site {
 
 @media only screen and (max-width: 992px) {
     .call-search-box {
-        top: 25px;
+        top: 66px;
     }
 
     header {
