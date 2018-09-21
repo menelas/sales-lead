@@ -221,6 +221,9 @@ span.time-clock {
     margin-right: 15px;
     padding: 15px;
     border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-icon-box i.fa{
@@ -242,6 +245,10 @@ span.time-clock {
 
 .image-icon-box.bg4 {
     background-color: #acacac;
+}
+
+.image-icon-box.bg5 {
+    background-color: #e77869;
 }
 
 /**** Left Navigation ****/

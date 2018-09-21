@@ -1,3 +1,7 @@
+## 2018-9-21
+• Added remaining queue in manager-dashboard.html
+• Fixed responsive changes and IE errors on agent and manager’s dashboard
+
 ## 2018-9-20
 • Added left navigation on profile-page.html
 
