@@ -116,9 +116,28 @@ td:nth-child(1){
     #stats-site .form-inline .input-group {
         width: 115px;
     }
+}
 
 @media (max-width: 1100px) {
     #stats-site .col:not(:last-child) .form-inline:after {
         margin-right: 0px;
     }   
+}
+
+
+.btn-cell {
+   display: table-cell;
+   padding-left: 2px;
+   padding-right: 2px;
+}
+
+.actionbtn a {
+   display: block;
+   padding: 5px 7px 4px;
+   border-radius: 3px;
+   text-align: center;
+   color: #135596;
+   font-size: 14px;
+   white-space: nowrap;
+   background: inherit;
 }

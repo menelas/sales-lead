@@ -1,7 +1,14 @@
 /**** Profile Content ****/
-
 .main-content {
     padding: 0px;
+}
+
+.container-fluid-has-sidebar {
+    background-color: #fff;
+    padding: 25px 20px 25px 100px;
+    border-top: none;
+    position: relative;
+    height: calc(100vh - 100px);
 }
 
 .card.table-style {
