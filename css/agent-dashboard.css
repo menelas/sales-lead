@@ -141,3 +141,7 @@ td:nth-child(1){
    white-space: nowrap;
    background: inherit;
 }
+
+.pagination {
+    margin-top: -15px;
+}
