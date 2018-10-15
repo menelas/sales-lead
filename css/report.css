@@ -1,0 +1,49 @@
+.main-content {
+    padding: 0px;
+}
+
+.title-header {
+    padding: 9px 11px 14px;
+    background: #4995cf;
+    color: #fff;
+    display: block;
+    border-radius: 5px 5px 0px 0px;
+    z-index: 1;
+    border-radius: 0;
+    margin-bottom: 20px;
+    height: 40px;
+}
+.nav.nav-tabs {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    border-bottom:0;
+    border-right: 1px solid #ddd;
+    padding-right: 15px;
+}
+.nav-tabs .nav-link {
+    border: 1px solid #dee2e6;
+    border-radius: 0px !important;    
+}
+.nav-tabs .nav-link.active {
+	background: #eee;
+}
+.tab-content>.active {
+    display: block;
+    min-height: 165px;
+}
+.nav.nav-tabs {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    border-bottom: 0;
+    border-right: 1px solid transparent;
+    padding-right: 15px;
+}
+.input-group-addon {
+	padding: 6.5px;
+}
+.run-report {
+	margin: 15px;
+
+}

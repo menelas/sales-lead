@@ -1,3 +1,7 @@
+## 2018-10-15
+• Replaced clock icon with pause to pause timer
+• Added stop emulating option on profile-page.html
+
 ## 2018-10-3
 • Updated app.css to remove gray background on all pages
 • Updated various pages css

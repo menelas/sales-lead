@@ -8,6 +8,8 @@
         }
         if(curVal=="Logout"){
             $(this).addClass("logout");
+        } else if(curVal=="stop"){
+            $(this).addClass("stop-emulating");
         }else{
             $(this).removeClass("logout");
         }

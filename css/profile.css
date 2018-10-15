@@ -177,6 +177,15 @@ div#stats-site {
     margin-right: 100px;
 }
 
+span#realtime {
+    color: #cd1313;
+    font-weight: bold;
+}
+
+span#realtime2 {
+    color: #ffffff;
+}
+
 @media only screen and (max-width: 992px) {
     .call-search-box {
         top: 66px;

@@ -21,7 +21,6 @@ body {
     border-top: none;
     padding: 15px;
 }
-
 label {
     font-weight: bold;
 }
@@ -46,6 +45,7 @@ label {
     border-radius: 3px;
     background-color: #c8c8c8;
     width: 260px;
+    position: relative;
 }
 
 .box-phone > a {
@@ -55,10 +55,6 @@ label {
     border-radius: 5px;
     color: #3b3b3b;
     font-weight: bold;
-}
-
-span#realtime {
-    color: #cd1313;
 }
 
 .box-phone > a:hover {
@@ -113,6 +109,9 @@ span#realtime {
 
 span.time-clock {
     float: right;
+    position: absolute;
+    right: 10px;
+    top: 8px;
 }
 
 .time-clock img{
@@ -131,7 +130,7 @@ span.time-clock {
     background-color: #eee;
     padding: 10px;
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 455px;
     margin-top: -8px;
     float: right;
     width: 100%;
@@ -146,14 +145,8 @@ span.time-clock {
     padding-left: 6px;
 }
 
-
-
-.box-phone-status select.offline {
+.box-phone-status select.offline, .box-phone-status select.logout, .box-phone-status select.stop-emulating {
     background: transparent url("../images/offline-status.png") no-repeat left center;
-}
-
-.box-phone-status select.logout {
-    background: transparent url("../images/logout-status.png") no-repeat left center;
 }
 
 .box-phone-status select:focus {
@@ -632,7 +625,7 @@ table {
 }
 
 .head-drop {
-   padding: 11px 16px;
+   padding: 4px 0px 4px 12px;
    margin: 0;
    font-size: 14px;
 }
