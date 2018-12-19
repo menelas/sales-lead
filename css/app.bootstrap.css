@@ -1,6 +1,7 @@
 a {
 	color: #337ab7;
 }
+
 .form-control, .dropdown-menu  {
 	font-size: inherit;
 }
@@ -24,5 +25,24 @@ a {
 
 .btn-primary {
 	background: #135596;
+	border-radius: 4px;
 	border: 1px solid #135596;
+	padding: 5px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+	text-decoration: none;
+	opacity: 0.9;
+}
+
+.btn-secondary {
+	background-color: #ffffff;
+	border-color: #ccc;
+	color: #000000;
+	padding: 5px;
+	font-size: 13px;
+	cursor: pointer;
+
 }

@@ -81,6 +81,7 @@
             <div class="card bg-primary mb-3 table-style">
                 <div class="card-header">
                     <span>Chris Robertson</span>
+                    <i class="fa fa-user-friends" data-toggle="tooltip" data-placement="top" title="My Referral" aria-hidden="true"></i>
                 </div>
                 <div class="card-body">
                     <form>
@@ -100,7 +101,23 @@
                                     </div>
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3"> <label>State:</label> Florida </div>
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3"> <label>Type:</label> Auto </div>
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3"> <label>Lead Source:</label> Eagle Cross Sell </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <label>Lead Source:</label>
+                                            </div>
+                                            <div class="form-group mx-sm-2">
+                                                <select class="form-control custom-hover-select" id="lead-source">
+                                                    <option value="Client">Client</option>
+                                                    <option value="Mortgage Broker">Mortgage Broker</option>
+                                                    <option selected value="Personal">Personal</option>
+                                                    <option value="Producer">Producer</option>
+                                                    <option value="Realtor">Realtor</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3"> <label>Contact External ID:</label> COLEMAHE01 </div>
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 form-inline otherFieldToggle mb-3" id="otherFieldToggle">
                                         <div class="form-group">
@@ -144,7 +161,6 @@
                                     </div>
 
                                     <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12 mb-3">
-
                                         <div class="form-inline policyNumberToggle" id="policyNumberToggle">
                                             <div class="form-group">
                                                 <label>Policy Number:</label>
@@ -186,17 +202,17 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Agent</th>
                                     <th>Duration</th>
                                     <th>Note</th>
+                                    <th>Agent</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-title="Date">8/24/2018 7:03 PM</td>
-                                    <td data-title="Agent">Carter Hahn</td>
+                                    <td data-title="Date">11/24/2018 3:03 PM</td>
                                     <td data-title="Duration">00:02:14</td>
-                                    <td data-title="Note">Lead called in and decline quote.</td>
+                                    <td data-title="Note">Called and briefly spoke to referral.</td>
+                                    <td data-title="Agent">Carter Hahn</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -218,6 +234,7 @@
 
     <script src="js/phone-status.js"></script>
     <script src="js/online-status.js"></script>
+    <script src="js/tooltip.js"></script>
     <script src="js/menu.js"></script>
 </body>
 

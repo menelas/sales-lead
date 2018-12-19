@@ -31,7 +31,7 @@ label {
    margin: 0;
    position: fixed;
    bottom: 0;
-   z-index: 9999;
+   z-index: 1;
    background: #f5f7f8;
    min-height: 25px;
    width: 100%;
@@ -149,6 +149,10 @@ span.time-clock {
     background: transparent url("../images/offline-status.png") no-repeat left center;
 }
 
+.box-phone-status select.away {
+    background: transparent url("../images/away-status.png") no-repeat left center;
+}
+
 .box-phone-status select:focus {
     border: 0;
     outline: 0;
@@ -190,6 +194,12 @@ span.time-clock {
     background: #386f9b url(../images/next-call-icon.png) no-repeat center;
 }
 
+.fa-phone {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform:scale(-1, 1)
+}
 
 .call-search-box{
     position: absolute;
@@ -435,7 +445,7 @@ button.navbar-toggler {
 }
 
 .fixed-sidebar ul li i {
-    font-size: 36px;
+    font-size: 32px;
     color: #135596;
     display: block;
 }
@@ -830,4 +840,19 @@ td a {
 
 .numeric {
     text-align: right;
+}
+
+.header-link, .header-link:hover {
+  color: inherit;
+}
+
+.disabled {
+  opacity: 0.1;
+  pointer-events: none;
+  cursor: default;
+}
+
+.required:before {
+    color: red;
+    content: '*';
 }

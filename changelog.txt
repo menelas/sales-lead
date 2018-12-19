@@ -1,3 +1,7 @@
+## 2018-12-3
+• Updated fontawesome folder by adding all.css,font-awesome.min.css, and web fonts to version 5 
+• Created referral page
+
 ## 2018-10-15
 • Replaced clock icon with pause to pause timer
 • Added stop emulating option on profile-page.html

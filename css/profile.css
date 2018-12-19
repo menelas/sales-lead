@@ -66,11 +66,6 @@
     border: 0;
 }
 
-.tooltip .tooltip-inner {
-    width: 800px;
-    max-width: 100%;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -167,9 +162,10 @@ div#stats-site {
 .policyNumberToggle { display: none; }
 .policyNumberToggle.active { display: block; }
 
+.otherFieldToggle { display: none; }
+.otherFieldToggle.active { display: block; }
 #datetimepicker1 input {
     border-radius: 5px 0px 0px 5px !important;
-    margin-left: 10px;
 }
 
 .box-phone {
@@ -185,7 +181,15 @@ span#realtime {
 span#realtime2 {
     color: #ffffff;
 }
-
+.form-group-tels {
+    padding-left: 5px;
+}
+#datetimepickerContainer .input-group-addon {
+    padding: 8px 14px;
+}
+.side-with-border{
+    border-left: 1px solid #d0d0d0
+}
 @media only screen and (max-width: 992px) {
     .call-search-box {
         top: 66px;

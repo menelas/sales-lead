@@ -124,6 +124,10 @@ td:nth-child(1){
     }   
 }
 
+.fa-user-friends {
+    float: right;
+    margin: 8px 40px 0px 0px;
+}
 
 .btn-cell {
    display: table-cell;
@@ -145,3 +149,6 @@ td:nth-child(1){
 .pagination {
     margin-top: -15px;
 }
+
+.otherFieldToggle { display: none; }
+.otherFieldToggle.active { display: block; }

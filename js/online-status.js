@@ -6,13 +6,23 @@
         }else{
             $(this).removeClass("offline");
         }
+
+        if(curVal=="Away"){
+            $(this).addClass("away");
+        }else{
+            $(this).removeClass("away");
+        }
+
         if(curVal=="Logout"){
             $(this).addClass("logout");
-        } else if(curVal=="stop"){
-            $(this).addClass("stop-emulating");
         }else{
             $(this).removeClass("logout");
         }
 
+        if(curVal=="Stop"){
+            $(this).addClass("stop-emulating");
+        }else{
+            $(this).removeClass("stop-emulating");
+        }
     });
 })(jQuery);

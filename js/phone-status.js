@@ -1,35 +1,45 @@
 (function($) {
-	$('#datetimepicker1').datetimepicker();	
-	function datePickShow(){
-		if($(".lead-status-toggle").hasClass('active')){
-			if($("#reachDecisionMaker").prop('checked')){
-			   $('#datetimepickerContainer').addClass('active');
-			}else{
-			   $('#datetimepickerContainer').removeClass('active');
-			}				
-		}else{
-			$('#datetimepickerContainer').removeClass('active');
-			
-		}
-	
-	}
-	function cancelReasonToggle(){
-		if($("#lead-status").val() == 'Decline'){
-			$('#cancelReasonToggle').addClass('active');				
-		}else{
-			$('#cancelReasonToggle').removeClass('active');
-		}
-	}	
-	function showPolicyNumber(){
-		if($("#lead-status").val() == 'Sold'){
-			$('#policyNumberToggle').addClass('active');				
-		}else{
-			$('#policyNumberToggle').removeClass('active');
-		}
-	}	
-   $("#reachDecisionMaker").on("click", function(){
-	   datePickShow();
-    });	
+    if( $("#datetimepicker1").length > 0 ){
+        $('#datetimepicker1').datetimepicker();
+    }
+    function datePickShow(){
+        if($(".lead-status-toggle").hasClass('active')){
+            if($("#reachDecisionMaker").prop('checked')){
+               $('#datetimepickerContainer').addClass('active');
+            }else{
+               $('#datetimepickerContainer').removeClass('active');
+            }               
+        }else{
+            $('#datetimepickerContainer').removeClass('active');
+            
+        }
+    
+    }
+    function cancelReasonToggle(){
+        if($("#lead-status").val() == 'Decline'){
+            $('#cancelReasonToggle').addClass('active');                
+        }else{
+            $('#cancelReasonToggle').removeClass('active');
+        }
+    }   
+    function showPolicyNumber(){
+        if($("#lead-status").val() == 'Sold'){
+            $('#policyNumberToggle').addClass('active');                
+        }else{
+            $('#policyNumberToggle').removeClass('active');
+        }
+    }
+    function showOtherField(){
+        if( $("#lead-source").val() == 'Other' ){
+            $('#otherFieldToggle').addClass('active');
+        }else{
+            $('#otherFieldToggle').removeClass('active');
+        }
+    }
+
+    $("#reachDecisionMaker").on("click", function(){
+       datePickShow();
+    }); 
     var count = 30;
     var t, flagDown = true, flagUp = false;
     var mins = 0;
@@ -37,24 +47,33 @@
     var elem2 = $("#realtime2");
     counting();
 
-    $('[data-toggle="tooltip"]').tooltip({placement:"top"});
-	
-	function StatusChangeUpdates(){
-		leaderStatus();
-		datePickShow();
-		showPolicyNumber();
-		cancelReasonToggle();		
-	}
-	StatusChangeUpdates();
+    if( $('[data-toggle="tooltip"]').length > 0 ){
+        $('[data-toggle="tooltip"]').tooltip({placement:"top"});
+    }
+
+    
+    function StatusChangeUpdates(){
+        leaderStatus();
+        datePickShow();
+        showPolicyNumber();
+        cancelReasonToggle();
+    }
+    function LeadSourceChangeUpdates(){
+        showOtherField();
+    }
+    StatusChangeUpdates();
     $("#lead-status").on("change", function(){
         StatusChangeUpdates();
+    });
+    $("#lead-source").on("change", function(){
+        LeadSourceChangeUpdates();
     });
     function leaderStatus(){
         var curVal = $("#lead-status").val();
 
         if(curVal=="Open"){
             $(".lead-status-toggle").addClass("active");
-			
+            
             $(".status-sold-toggle").removeClass("active");
             $(".decline-status-toggle").removeClass("active");
             $(".call-back-toggle").hide();
@@ -71,13 +90,13 @@
             $(".lead-status-toggle").removeClass("active");
             $(".call-back-toggle").hide();
         }else if(curVal=="Quote"){
-			$(".lead-status-toggle").addClass("active");
-		}else{
+            $(".lead-status-toggle").addClass("active");
+        }else{
             $(".lead-status-toggle").removeClass("active");
             $(".status-sold-toggle").removeClass("active");
             $(".call-back-toggle").hide();
         }
-		
+        
     }
     $("#btn-phone").on("click", function(e){
         e.preventDefault();

@@ -18,6 +18,10 @@ body {
 	font-size: 23px;
 }
 
+.box-container {
+    margin-bottom: 60px;
+}
+
 .box-container a:hover {
  	text-decoration: none;
 }
